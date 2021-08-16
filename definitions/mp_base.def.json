@@ -1,0 +1,185 @@
+{
+    "version": 2,
+    "name": "MP Base",
+    "inherits": "fdmprinter",
+    "metadata": {
+        "author": "MP",
+        "manufacturer": "Monoprice",
+        "category": "Monoprice",
+        "visible": false,
+        "file_formats": "text/x-gcode",
+        
+        "machine_extruder_trains":
+        {
+            "0": "mp_base_extruder_0"
+        },
+
+        "has_materials": true,
+        "has_machine_quality": true,
+
+        "preferred_quality_type": "draft",
+        "preferred_material": "generic_pla"
+    },
+    "overrides": {
+        "material_bed_temp_wait":
+        {
+            "default_value": false
+        },
+        "material_print_temp_wait":
+        {
+            "default_value": false
+        },
+        "material_diameter":
+        {
+            "default_value": 1.75
+        },
+        "machine_id":
+        {
+            "default_value": 1
+        },
+        "machine_nozzle_size":
+        {
+            "default_value": 0.4
+        },
+        "machine_steps_per_mm_x":
+        {
+            "default_value": 94
+        },
+        "machine_steps_per_mm_y":
+        {
+            "default_value": 94
+        },
+        "machine_steps_per_mm_z":
+        {
+            "default_value": 400
+        },
+        "machine_steps_per_mm_e":
+        {
+            "default_value": 96
+        },
+        "machine_max_feedrate_e": 
+        {
+            "default_value": 45
+        },
+        "machine_max_feedrate_z":
+        {
+            "default_value": 5
+        },
+        "wall_0_wipe_dist":
+        {
+            "default_value": 0.2
+        },
+        "roofing_layer_count":
+        {
+            "default_value": 0
+        },
+        "travel_compensate_overlapping_walls_0_enabled":
+        {
+            "default_value": true
+        },
+        "travel_compensate_overlapping_walls_x_enabled":
+        {
+            "default_value": true
+        },
+        "skin_no_small_gaps_heuristic":
+        {
+            "default_value": false
+        },
+        "infill_sparse_density":
+        {
+            "default_value": 10
+        },
+        "material_flow":
+        {
+            "default_value": 75
+        },
+        "material_initial_print_temperature":
+        {
+            "default_value": 200,
+            "maximum_value":"250"
+        },
+        "material_final_print_temperature":
+        {
+            "default_value": 195,
+            "maximum_value":"250"
+        },
+        "material_print_temperature": {
+            "minimum_value": "0"
+        },
+        "material_bed_temperature": {
+            "minimum_value": "0"
+        },
+        "material_standby_temperature": {
+            "minimum_value": "0"
+        },
+        "retraction_amount":
+        {
+            "default_value": 1.5
+        },
+        "retraction_speed":
+        {
+            "default_value": 28
+        },
+        "support_angle":
+        {
+            "default_value": 60
+        },
+        "support_wall_count":
+        {
+            "default_value": 0
+        },
+        "support_roof_line_distance":
+        {
+            "default_value": 0.57
+        },
+        "support_bottom_line_distance":
+        {
+            "default_value": 0.57
+        },
+        "support_interface_pattern":
+        {
+            "default_value": "lines"
+        },
+        "adhesion_type":
+        {
+            "default_value": "raft"
+        },
+        "raft_margin":
+        {
+            "default_value": 8
+        },
+        "raft_airgap":
+        {
+            "default_value": 0.22
+        },
+        "raft_surface_speed":
+        {
+            "value": 40       
+        },
+        "raft_interface_speed":
+        {
+            "value": 33               
+        },
+        "raft_base_speed":{
+            "value": 20
+        },
+        "extruder_prime_pos_y":
+        {
+            "minimum_value": "0",
+            "maximum_value": "machine_depth"
+        },
+        "extruder_prime_pos_x":
+        {
+            "minimum_value": "0",
+            "maximum_value": "machine_width"
+        },
+        "prime_tower_enable":
+        {
+            "default_value": false
+        },
+        "raft_surface_fan_speed":
+        {
+            "value": 100
+        }        
+    }
+}

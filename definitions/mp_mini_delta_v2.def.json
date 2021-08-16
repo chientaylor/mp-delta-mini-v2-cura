@@ -1,0 +1,152 @@
+{
+    "name": "MP Mini Delta v2",
+    "version": 2,
+    "inherits": "mp_base",
+    "metadata": {
+        "visible": true,
+        "author": "MP",
+        "manufacturer": "Monoprice",
+        "platform": "mp_mini_delta_platform.3mf",
+        "file_formats": "text/x-gcode",
+        "platform_offset": [ 0, 0, 0],
+		"machine_extruder_trains":
+        {
+            "0": "mp_base_extruder_0"
+        },
+        "has_machine_quality": false,
+        "has_materials": true,
+        "has_variants": false,
+        "has_machine_materials": false,
+        "has_variant_materials": false,
+        "preferred_quality_type": "normal"
+
+    },
+
+    "overrides": {
+        "machine_extruder_count": 
+		{
+			"default_value": 1
+		},
+        "machine_heated_bed": 
+		{ 
+		    "default_value": true 
+		},
+        "machine_shape":
+		{
+			"default_value": "elliptic"
+		},
+        "machine_center_is_zero": 
+		{ 
+		    "default_value": true 
+		},
+        "machine_height": 
+		{ 
+		    "default_value": 120 
+		},
+        "machine_depth": 
+		{ 
+		    "default_value": 110 
+		},
+        "machine_width": 
+		{ 
+		    "default_value": 110 
+		},
+        "machine_name": 
+		{ 
+		    "default_value": "MP Mini Delta v2" 
+		},
+        "machine_start_gcode": 
+		{
+            "default_value": ";(**** start.gcode for MP Mini Delta****)\nG21\nG90\nM82\nM107\nM104 S170\nG28 X0 Y0\nG28 Z0\nG29 Z0.4\nG1 Z15 F300\nM109 S{material_print_temperature_layer_0}\nG92 E0\nG1 F200 E3\nG92 E0\nG1 F2000\n"
+        },
+        "machine_end_gcode": 
+		{
+            "default_value": ";(**** end.gcode for MP Mini Delta****)\nG28;(Stick out the part)\nM190 S0;(Turn off heat bed, don't wait.)\nG92 E10;(Set extruder to 10)\nG1 E7 F200;(retract 3mm)\nM104 S0;(Turn off nozzle, don't wait)\nG4 S300;(Delay 5 minutes)\nM107;(Turn off part fan)\nM84;(Turn off stepper motors.)"
+        },
+        "material_print_temp_prepend":
+		{
+			"default_value":false
+		},
+        "default_material_bed_temperature":
+		{
+            "default_value": 40
+		},
+		"material_bed_temperature":
+		{
+            "default_value": 40
+		},
+		"material_print_temperature_layer_0":
+		{
+			"value": 215
+		},
+		"material_initial_print_temperature":
+		{
+			"value": 200
+		},
+		"material_final_print_temperature":
+		{
+			"value": 200
+		},
+        "retraction_amount":
+        {
+            "default_value": 5
+        },
+        "retraction_speed":
+        {
+            "default_value": 28
+        },
+        "speed_wall_0": 
+		{
+            "default_value": 20.0,
+            "value":20.0
+        },
+        "speed_wall_x": 
+		{
+            "default_value": 25.0,
+            "value":25.0
+        },
+        "speed_topbottom": 
+		{
+            "default_value": 30.0
+        },
+        "speed_infill": 
+		{
+            "default_value": 40.0
+        },
+        "speed_support_infill": 
+		{
+            "default_value": 45.0
+        },
+        "speed_print_layer_0": 
+		{
+            "default_value": 22.0
+        },
+        "speed_travel_layer_0": 
+		{
+            "default_value": 60
+        },
+        "speed_travel": 
+		{
+            "default_value": 65.0
+        },
+        "speed_support_roof": 
+		{
+            "default_value": 30.0
+        },
+        "speed_support_bottom": 
+		{
+            "default_value": 30.0
+        },
+        "speed_roofing": 
+		{
+            "default_value": 25.0
+        },
+		"speed_z_hop":
+		{
+			"default_value": 5.0
+		},
+        "raft_base_thickness":{
+          "default_value":0.35
+        }
+	}
+}
